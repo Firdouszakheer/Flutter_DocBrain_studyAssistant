@@ -23,11 +23,11 @@ A professional, industry-ready Flutter Web application that transforms documents
 flutter --version  # Should be 3.x.x
 ```
 
-### 2. Get Your FREE Anthropic API Key
-1. Go to https://console.anthropic.com
+### 2. Get Your FREE Groq API Key
+1. Go to (https://console.groq.com/keys)
 2. Sign up / Log in
 3. Navigate to **API Keys**
-4. Create a new key — you get **free credits** to start!
+4. Create a new key   to start!
 
 ### 3. Setup Project
 ```bash
@@ -41,11 +41,11 @@ flutter pub get
 ### 4. Add Your API Key
 Open `lib/services/ai_service.dart` and replace:
 ```dart
-static const String _apiKey = 'YOUR_ANTHROPIC_API_KEY_HERE';
+static const String _apiKey = 'YOUR_API_KEY_HERE';
 ```
 with your actual key:
 ```dart
-static const String _apiKey = 'sk-ant-api03-...';
+static const String _apiKey = '';
 ```
 
 ### 5. Run in Browser
@@ -68,7 +68,7 @@ docbrain/
 │   ├── models/
 │   │   └── document_model.dart    # Data models
 │   ├── services/
-│   │   ├── ai_service.dart        # Claude API integration
+│   │   ├── ai_service.dart        #  API integration
 │   │   └── document_service.dart  # File handling
 │   ├── screens/
 │   │   └── home_screen.dart       # Main screen + navigation
@@ -91,7 +91,7 @@ docbrain/
 ## 🎨 Tech Stack
 
 - **Framework**: Flutter 3.x (Web)
-- **AI Model**: Claude Haiku 4.5 (fastest, most affordable)
+- **AI Model**: llama-3.1-8b-instant (fastest, most affordable)
 - **State Management**: Provider
 - **Animations**: flutter_animate
 - **Fonts**: Orbitron + Exo 2 + Rajdhani (Google Fonts)
@@ -100,7 +100,7 @@ docbrain/
 
 ## 💡 AI Model Choice
 
-Uses **claude-haiku-4-5-20251001** — optimal because:
+Uses **llama-3.1-8b-instant** — optimal because:
 - ⚡ Fastest response time (~1-2 seconds)
 - 💰 Most cost-effective (free tier friendly)
 - 🎯 Excellent for document Q&A tasks
@@ -128,10 +128,7 @@ Future<void> generateQuiz(String documentContent, {int count = 10})
 
 ### Change AI Model
 ```dart
-static const String _model = 'claude-haiku-4-5-20251001';
-// Options: 'claude-sonnet-4-6' (smarter), 'claude-opus-4-6' (most capable)
-```
-
+static const String _model = 'llama-3.1-8b-instant';
 ### Add More File Types
 In `document_service.dart`, extend `_extractPdfText()` or add new handlers.
 
@@ -146,4 +143,4 @@ Deploy to Firebase Hosting, Netlify, or any static host.
 
 ---
 
-**Built with ❤️ using Flutter + Claude AI**
+**Built with ❤️ using Flutter**
