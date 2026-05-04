@@ -12,7 +12,7 @@ class AIService extends ChangeNotifier {
   // IMPORTANT: Replace with your actual Groq API key.
   // Get one at https://console.groq.com/keys
   static const String _apiKey =
-      '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';
+      'Your API';
 
   String _summary = '';
   List<QuizQuestion> _questions = [];
